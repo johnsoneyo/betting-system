@@ -37,6 +37,9 @@ jobs:
           java-version: 17
           cache: maven
 
+      - name: Build libs
+        run: ./mvnw -pl libs/dto/common-dto,libs/domain/common-domain clean install -DskipTests
+
       - name: Build & Test API
         run: ./mvnw -f api/event-outcomes-api/pom.xml clean verify
 
@@ -71,6 +74,9 @@ jobs:
           java-version: 17
           cache: maven
 
+      - name: Build libs
+        run: ./mvnw -pl libs/dto/common-dto,libs/domain/common-domain clean install -DskipTests
+
       - name: Build & Test Processor
         run: ./mvnw -f messaging/event-outcomes-processor/pom.xml clean verify
 
@@ -103,6 +109,9 @@ jobs:
           distribution: temurin
           java-version: 17
           cache: maven
+
+      - name: Build libs
+        run: ./mvnw -pl libs/dto/common-dto,libs/domain/common-domain clean install -DskipTests
 
       - name: Build & Test Settlement
         run: ./mvnw -f messaging/event-bet-settlement/pom.xml clean verify
