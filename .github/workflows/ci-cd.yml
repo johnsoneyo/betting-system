@@ -37,11 +37,13 @@ jobs:
           java-version: 17
           cache: maven
 
-      - name: Build libs
-        run: ./mvnw -pl libs/dto/common-dto,libs/domain/common-domain clean install -DskipTests
+      # Step 1: Install parent POM
+      - name: Install Parent POM
+        run: ./mvnw -f betting-system/pom.xml clean install -DskipTests
 
+      # Step 2: Build API + all dependencies
       - name: Build & Test API
-        run: ./mvnw -f api/event-outcomes-api/pom.xml clean verify
+        run: ./mvnw -pl api/event-outcomes-api -am clean verify
 
       - name: Login to GHCR
         uses: docker/login-action@v2
@@ -74,26 +76,19 @@ jobs:
           java-version: 17
           cache: maven
 
-      - name: Build libs
-        run: ./mvnw -pl libs/dto/common-dto,libs/domain/common-domain clean install -DskipTests
+      - name: Install Parent POM
+        run: ./mvnw -f betting-system/pom.xml clean install -DskipTests
 
       - name: Build & Test Processor
-        run: ./mvnw -f messaging/event-outcomes-processor/pom.xml clean verify
+        run: ./mvnw -pl messaging/event-outcomes-processor -am clean verify
 
-#      - name: Login to GHCR
-#        uses: docker/login-action@v2
-#        with:
-#          registry: ${{ env.REGISTRY }}
-#          username: ${{ github.actor }}
-#          password: ${{ secrets.GITHUB_TOKEN }}
-
-#      - name: Build & Push Processor Docker Image
-#        uses: docker/build-push-action@v4
-#        with:
-#          context: messaging/event-outcomes-processor
-#          push: true
-#          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAMESPACE }}/event-outcomes-processor:latest
-#          cache: type=gha
+      # Docker steps (if needed) can be uncommented here
+      # - name: Login to GHCR
+      #   uses: docker/login-action@v2
+      #   with:
+      #     registry: ${{ env.REGISTRY }}
+      #     username: ${{ github.actor }}
+      #     password: ${{ secrets.GITHUB_TOKEN }}
 
   event-bet-settlement:
     runs-on: ubuntu-latest
@@ -110,23 +105,16 @@ jobs:
           java-version: 17
           cache: maven
 
-      - name: Build libs
-        run: ./mvnw -pl libs/dto/common-dto,libs/domain/common-domain clean install -DskipTests
+      - name: Install Parent POM
+        run: ./mvnw -f betting-system/pom.xml clean install -DskipTests
 
       - name: Build & Test Settlement
-        run: ./mvnw -f messaging/event-bet-settlement/pom.xml clean verify
+        run: ./mvnw -pl messaging/event-bet-settlement -am clean verify
 
-#      - name: Login to GHCR
-#        uses: docker/login-action@v2
-#        with:
-#          registry: ${{ env.REGISTRY }}
-#          username: ${{ github.actor }}
-#          password: ${{ secrets.GITHUB_TOKEN }}
-#
-#      - name: Build & Push Settlement Docker Image
-#        uses: docker/build-push-action@v4
-#        with:
-#          context: messaging/event-bet-settlement
-#          push: true
-#          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAMESPACE }}/event-bet-settlement:latest
-#          cache: type=gha
+      # Docker steps can be uncommented here
+      # - name: Login to GHCR
+      #   uses: docker/login-action@v2
+      #   with:
+      #     registry: ${{ env.REGISTRY }}
+      #     username: ${{ github.actor }}
+      #     password: ${{ secrets.GITHUB_TOKEN }}
