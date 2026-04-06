@@ -1,0 +1,2 @@
+com.sportygroup.assignment.common.kafka.config.KafkaProducerAutoConfiguration
+com.sportygroup.assignment.common.kafka.config.KafkaConsumerAutoConfiguration

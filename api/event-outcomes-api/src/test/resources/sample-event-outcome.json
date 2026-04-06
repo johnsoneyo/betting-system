@@ -1,0 +1,14 @@
+{
+  "eventId": 123,
+  "sportId": 1,
+  "marketId": 123,
+  "outcomeId": 14,
+  "outcomeName": "Team A Wins",
+  "voidOutcomeId": 3,
+  "voidFactor": 0.5,
+  "specifiers": {
+    "playerId": 456,
+    "handicap": "1.5",
+    "period": "halfTime"
+  }
+}

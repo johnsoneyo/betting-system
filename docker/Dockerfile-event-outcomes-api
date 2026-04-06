@@ -1,0 +1,31 @@
+# Stage 1: Build
+FROM maven:3.9.3-eclipse-temurin-17 AS build
+WORKDIR /app
+
+# Copy entire project (monorepo)
+COPY . .
+
+# Build shared libraries first so their SNAPSHOTs are available
+RUN mvn -pl libs/dto/common-dto,libs/domain/common-domain clean install -DskipTests
+
+# Build API module and its dependencies, produce layered Spring Boot JAR
+RUN mvn -pl api/event-outcomes-api -am clean package -DskipTests
+
+RUN java -Djarmode=layertools  -jar api/event-outcomes-api/target/*.jar extract
+
+
+# Stage 2: Runtime
+FROM eclipse-temurin:17-jdk-jammy
+WORKDIR /app
+
+# Copy Spring Boot layered JAR folders from API module
+COPY --from=build /app/dependencies/ ./dependencies/
+COPY --from=build /app/spring-boot-loader/ ./spring-boot-loader/
+COPY --from=build /app/snapshot-dependencies/ ./snapshot-dependencies/
+COPY --from=build /app/application/ ./application/
+
+# Expose API port
+EXPOSE 8080
+
+# Run the layered Spring Boot JAR
+ENTRYPOINT ["java", "org.springframework.boot.loader.JarLauncher"]

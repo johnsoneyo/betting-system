@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  namesrv:
+    image: apache/rocketmq:5.4.0
+    container_name: rmqnamesrv
+    ports:
+      - "9876:9876"
+    command: sh mqnamesrv
+    networks:
+      - rmq-net
+
+  broker:
+    image: apache/rocketmq:5.4.0
+    platform: linux/amd64
+    container_name: rmqbroker
+    ports:
+      - "10911:10911"
+      - "10909:10909"
+    environment:
+      - NAMESRV_ADDR=namesrv:9876
+    volumes:
+      - ./broker.conf:/home/rocketmq/rocketmq-5.4.0/conf/broker.conf
+    command: sh mqbroker -n namesrv:9876 -c /home/rocketmq/rocketmq-5.4.0/conf/broker.conf
+    depends_on:
+      - namesrv
+    networks:
+      - rmq-net
+
+networks:
+  rmq-net:
+    driver: bridge

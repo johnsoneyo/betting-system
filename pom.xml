@@ -1,0 +1,87 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.sportygroup.assignment</groupId>
+    <artifactId>betting-system</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <spring.boot.version>3.2.0</spring.boot.version>
+        <java.version>17</java.version>
+        <springdoc.version>2.2.0</springdoc.version>
+        <cloud-event.version>4.0.1</cloud-event.version>
+        <rocketmq.version>2.3.2</rocketmq.version>
+    </properties>
+
+    <modules>
+        <module>libs/domain/common-domain</module>
+        <module>api/event-outcomes-api</module>
+        <module>messaging/event-outcomes-processor</module>
+        <module>messaging/event-bet-settlement</module>
+        <module>libs/integration/common-kafka</module>
+        <module>libs/dto/common-dto</module>
+    </modules>
+
+    <!-- Spring Boot BOM for dependency management -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version> <!-- Use desired Spring Boot version -->
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- bom modules -->
+            <dependency>
+                <groupId>com.sportygroup.assignment</groupId>
+                <artifactId>common-domain</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sportygroup.assignment</groupId>
+                <artifactId>common-dto</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sportygroup.assignment</groupId>
+                <artifactId>common-kafka</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+                <version>${springdoc.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.rocketmq</groupId>
+                <artifactId>rocketmq-spring-boot-starter</artifactId>
+                <version>${rocketmq.version}</version>
+            </dependency>
+
+            <!-- CloudEvents core API -->
+            <dependency>
+                <groupId>io.cloudevents</groupId>
+                <artifactId>cloudevents-api</artifactId>
+                <version>${cloud-event.version}</version> <!-- use latest version that matches your setup -->
+            </dependency>
+
+            <!-- CloudEvents Kafka binding (serializer/deserializer) -->
+            <dependency>
+                <groupId>io.cloudevents</groupId>
+                <artifactId>cloudevents-kafka</artifactId>
+                <version>${cloud-event.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+</project>

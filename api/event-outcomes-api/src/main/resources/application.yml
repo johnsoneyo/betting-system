@@ -1,0 +1,25 @@
+server:
+   port: 8084
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, metrics, prometheus
+
+  endpoint:
+    health:
+      show-details: always
+
+  health:
+    probes:
+      enabled: true
+    livenessstate:
+      enabled: true
+    readinessstate:
+      enabled: true
+
+common:
+  kafka:
+    producer:
+      enabled: true
+    bootstrap-servers: localhost:9094, localhost:9095  # Kafka broker address
