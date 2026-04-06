@@ -38,7 +38,7 @@ class DefaultEventOutcomeServiceTest {
         service.saveAndProcess(dto);
 
         // Assert & Verify interactions
-        verify(repository, times(1)).save(any(EventOutcome.class));
+        verify(repository, times(1)).upsertEventOutcome(any(EventOutcome.class));
         verify(orchestratorService, times(1)).processSettlementForEvent(123L);
         verifyNoMoreInteractions(repository, orchestratorService);
     }
