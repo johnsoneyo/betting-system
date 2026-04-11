@@ -31,4 +31,4 @@ COPY --from=build /layers/application/ ./application/
 EXPOSE 8080
 
 # Use correct Spring Boot launcher
-ENTRYPOINT ["java", "org.springframework.boot.loader.JarLauncher"]
+ENTRYPOINT ["java", "org.springframework.boot.loader.launch.JarLauncher"]
