@@ -22,10 +22,10 @@ FROM eclipse-temurin:17-jdk-jammy
 WORKDIR /app
 
 # Copy extracted layers (IMPORTANT: correct structure)
-COPY --from=build /layers/dependencies/ ./dependencies/
-COPY --from=build /layers/spring-boot-loader/ ./spring-boot-loader/
-COPY --from=build /layers/snapshot-dependencies/ ./snapshot-dependencies/
-COPY --from=build /layers/application/ ./application/
+COPY --from=build /app/layers/dependencies/ ./
+COPY --from=build /app/layers/spring-boot-loader/ ./
+COPY --from=build /app/layers/snapshot-dependencies/ ./
+COPY --from=build /app/layers/application/ ./
 
 # Expose Spring Boot port (adjust if needed)
 EXPOSE 8080
