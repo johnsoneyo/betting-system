@@ -1,2 +1,2 @@
-ai.johnsoneyo.common.kafka.config.KafkaProducerAutoConfiguration
-ai.johnsoneyo.common.kafka.config.KafkaConsumerAutoConfiguration
+ai.johnsoneyo.common.KafkaProducerAutoConfiguration
+ai.johnsoneyo.common.KafkaConsumerAutoConfiguration

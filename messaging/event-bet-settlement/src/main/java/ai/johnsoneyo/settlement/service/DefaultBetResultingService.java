@@ -2,20 +2,14 @@ package ai.johnsoneyo.settlement.service;
 
 
 import ai.johnsoneyo.common.dto.BetSettlementMessage;
-import ai.johnsoneyo.common.entity.Bet;
-import ai.johnsoneyo.common.entity.BetStatus;
 import ai.johnsoneyo.common.repository.BetRepository;
 import ai.johnsoneyo.settlement.service.data.BetResult;
-import ai.johnsoneyo.settlement.service.data.LossBetResult;
-import ai.johnsoneyo.settlement.service.data.VoidBetResult;
-import ai.johnsoneyo.settlement.service.data.WonBetResult;
 import ai.johnsoneyo.settlement.service.strategy.ResultingStrategy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.List;
 import java.util.Map;
 
 @Service
