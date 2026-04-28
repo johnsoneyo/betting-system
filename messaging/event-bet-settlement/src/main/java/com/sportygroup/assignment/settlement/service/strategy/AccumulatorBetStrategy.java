@@ -1,13 +1,13 @@
-package com.sportygroup.assignment.settlement.service.strategy;
+package ai.johnsoneyo.settlement.service.strategy;
 
 
-import com.sportygroup.assignment.common.entity.Bet;
-import com.sportygroup.assignment.common.entity.BetSlipStatusProjection;
-import com.sportygroup.assignment.common.repository.BetSlipRepository;
-import com.sportygroup.assignment.settlement.service.data.BetResult;
-import com.sportygroup.assignment.settlement.service.data.LossBetResult;
-import com.sportygroup.assignment.settlement.service.data.VoidBetResult;
-import com.sportygroup.assignment.settlement.service.data.WonBetResult;
+import ai.johnsoneyo.common.entity.Bet;
+import ai.johnsoneyo.common.entity.BetSlipStatusProjection;
+import ai.johnsoneyo.common.repository.BetSlipRepository;
+import ai.johnsoneyo.settlement.service.data.BetResult;
+import ai.johnsoneyo.settlement.service.data.LossBetResult;
+import ai.johnsoneyo.settlement.service.data.VoidBetResult;
+import ai.johnsoneyo.settlement.service.data.WonBetResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

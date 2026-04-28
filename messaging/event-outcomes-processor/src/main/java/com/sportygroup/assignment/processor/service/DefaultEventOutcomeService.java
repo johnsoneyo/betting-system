@@ -1,8 +1,8 @@
-package com.sportygroup.assignment.processor.service;
+package ai.johnsoneyo.processor.service;
 
-import com.sportygroup.assignment.common.dto.EventOutcomeDTO;
-import com.sportygroup.assignment.common.entity.EventOutcome;
-import com.sportygroup.assignment.common.repository.EventOutcomeRepository;
+import ai.johnsoneyo.common.dto.EventOutcomeDTO;
+import ai.johnsoneyo.common.entity.EventOutcome;
+import ai.johnsoneyo.common.repository.EventOutcomeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

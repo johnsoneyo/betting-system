@@ -1,8 +1,8 @@
-package com.sportygroup.assignment.common.repository;
+package ai.johnsoneyo.common.repository;
 
 
-import com.sportygroup.assignment.common.entity.Bet;
-import com.sportygroup.assignment.common.entity.BetStatus;
+import ai.johnsoneyo.common.entity.Bet;
+import ai.johnsoneyo.common.entity.BetStatus;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

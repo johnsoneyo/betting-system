@@ -1,6 +1,6 @@
-package com.sportygroup.assignment.common.kafka.config;
+package ai.johnsoneyo.common.kafka.config;
 
-import com.sportygroup.assignment.common.kafka.utils.KafkaTopics;
+import ai.johnsoneyo.common.kafka.utils.KafkaTopics;
 import org.apache.kafka.clients.admin.NewTopic;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;

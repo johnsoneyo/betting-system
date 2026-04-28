@@ -1,6 +1,6 @@
-package com.sportygroup.assignment.settlement.service;
+package ai.johnsoneyo.settlement.service;
 
-import com.sportygroup.assignment.common.dto.BetSettlementMessage;
+import ai.johnsoneyo.common.dto.BetSettlementMessage;
 
 public interface BetResultingService {
     void resultBet(BetSettlementMessage message);

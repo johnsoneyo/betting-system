@@ -1,4 +1,4 @@
-package com.sportygroup.assignment.common.dto;
+package ai.johnsoneyo.common.dto;
 
 public record BetSettlementMessage(
         Long betId,

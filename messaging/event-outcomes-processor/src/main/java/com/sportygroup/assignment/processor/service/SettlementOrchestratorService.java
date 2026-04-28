@@ -1,12 +1,12 @@
-package com.sportygroup.assignment.processor.service;
+package ai.johnsoneyo.processor.service;
 
 
-import com.sportygroup.assignment.common.dto.BetSettlementMessage;
-import com.sportygroup.assignment.common.entity.Bet;
-import com.sportygroup.assignment.common.entity.BetStatus;
-import com.sportygroup.assignment.common.entity.SettlementCheckProjection;
-import com.sportygroup.assignment.common.repository.BetRepository;
-import com.sportygroup.assignment.common.repository.OddRepository;
+import ai.johnsoneyo.common.dto.BetSettlementMessage;
+import ai.johnsoneyo.common.entity.Bet;
+import ai.johnsoneyo.common.entity.BetStatus;
+import ai.johnsoneyo.common.entity.SettlementCheckProjection;
+import ai.johnsoneyo.common.repository.BetRepository;
+import ai.johnsoneyo.common.repository.OddRepository;
 import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

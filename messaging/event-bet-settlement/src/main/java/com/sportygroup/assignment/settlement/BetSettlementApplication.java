@@ -1,4 +1,4 @@
-package com.sportygroup.assignment.settlement;
+package ai.johnsoneyo.settlement;
 
 
 

@@ -1,8 +1,8 @@
-package com.sportygroup.assignment.settlement.service.consumer;
+package ai.johnsoneyo.settlement.service.consumer;
 
 
-import com.sportygroup.assignment.common.dto.BetSettlementMessage;
-import com.sportygroup.assignment.settlement.service.BetResultingService;
+import ai.johnsoneyo.common.dto.BetSettlementMessage;
+import ai.johnsoneyo.settlement.service.BetResultingService;
 import org.apache.rocketmq.spring.annotation.RocketMQMessageListener;
 import org.apache.rocketmq.spring.core.RocketMQListener;
 import org.checkerframework.checker.units.qual.A;

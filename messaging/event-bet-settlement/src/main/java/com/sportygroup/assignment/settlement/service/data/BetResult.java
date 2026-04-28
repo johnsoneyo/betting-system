@@ -1,4 +1,4 @@
-package com.sportygroup.assignment.settlement.service.data;
+package ai.johnsoneyo.settlement.service.data;
 
 
 import java.math.BigDecimal;

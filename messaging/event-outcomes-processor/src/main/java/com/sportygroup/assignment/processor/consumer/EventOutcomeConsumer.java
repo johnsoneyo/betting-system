@@ -1,9 +1,9 @@
-package com.sportygroup.assignment.processor.consumer;
+package ai.johnsoneyo.processor.consumer;
 
-import com.sportygroup.assignment.common.dto.EventOutcomeDTO;
-import com.sportygroup.assignment.common.kafka.utils.KafkaGroups;
-import com.sportygroup.assignment.common.kafka.utils.KafkaTopics;
-import com.sportygroup.assignment.processor.service.EventOutcomeService;
+import ai.johnsoneyo.common.dto.EventOutcomeDTO;
+import ai.johnsoneyo.common.kafka.utils.KafkaGroups;
+import ai.johnsoneyo.common.kafka.utils.KafkaTopics;
+import ai.johnsoneyo.processor.service.EventOutcomeService;
 import io.cloudevents.CloudEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

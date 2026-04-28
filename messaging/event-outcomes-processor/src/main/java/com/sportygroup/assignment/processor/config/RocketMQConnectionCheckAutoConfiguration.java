@@ -1,4 +1,4 @@
-package com.sportygroup.assignment.processor.config;
+package ai.johnsoneyo.processor.config;
 
 
 import jakarta.annotation.Resource;

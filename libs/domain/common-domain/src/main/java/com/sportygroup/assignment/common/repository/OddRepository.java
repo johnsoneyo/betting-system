@@ -1,7 +1,7 @@
-package com.sportygroup.assignment.common.repository;
+package ai.johnsoneyo.common.repository;
 
-import com.sportygroup.assignment.common.entity.Odd;
-import com.sportygroup.assignment.common.entity.SettlementCheckProjection;
+import ai.johnsoneyo.common.entity.Odd;
+import ai.johnsoneyo.common.entity.SettlementCheckProjection;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

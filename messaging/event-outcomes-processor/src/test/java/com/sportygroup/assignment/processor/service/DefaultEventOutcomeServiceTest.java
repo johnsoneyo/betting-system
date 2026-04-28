@@ -1,8 +1,8 @@
-package com.sportygroup.assignment.processor.service;
+package ai.johnsoneyo.processor.service;
 
-import com.sportygroup.assignment.common.dto.EventOutcomeDTO;
-import com.sportygroup.assignment.common.entity.EventOutcome;
-import com.sportygroup.assignment.common.repository.EventOutcomeRepository;
+import ai.johnsoneyo.common.dto.EventOutcomeDTO;
+import ai.johnsoneyo.common.entity.EventOutcome;
+import ai.johnsoneyo.common.repository.EventOutcomeRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

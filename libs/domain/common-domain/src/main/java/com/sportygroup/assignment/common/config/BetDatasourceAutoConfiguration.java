@@ -1,12 +1,12 @@
-package com.sportygroup.assignment.common.config;
+package ai.johnsoneyo.common.config;
 
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 
-@EnableJpaRepositories(basePackages = "com.sportygroup.assignment.common.repository")
-@EntityScan(basePackages = "com.sportygroup.assignment.common.entity")
+@EnableJpaRepositories(basePackages = "ai.johnsoneyo.common.repository")
+@EntityScan(basePackages = "ai.johnsoneyo.common.entity")
 @Configuration
 public class BetDatasourceAutoConfiguration {
 }

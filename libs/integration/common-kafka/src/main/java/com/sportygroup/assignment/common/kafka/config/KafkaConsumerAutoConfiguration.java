@@ -1,6 +1,6 @@
-package com.sportygroup.assignment.common.kafka.config;
+package ai.johnsoneyo.common.kafka.config;
 
-import com.sportygroup.assignment.common.kafka.utils.KafkaGroups;
+import ai.johnsoneyo.common.kafka.utils.KafkaGroups;
 import io.cloudevents.CloudEvent;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;

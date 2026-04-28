@@ -1,4 +1,4 @@
-package com.sportygroup.assignment.common.entity;
+package ai.johnsoneyo.common.entity;
 
 public enum BetStatus {
     PENDING(0),

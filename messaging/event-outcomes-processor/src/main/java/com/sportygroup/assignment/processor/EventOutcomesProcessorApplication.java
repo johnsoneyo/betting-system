@@ -1,4 +1,4 @@
-package com.sportygroup.assignment.processor;
+package ai.johnsoneyo.processor;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

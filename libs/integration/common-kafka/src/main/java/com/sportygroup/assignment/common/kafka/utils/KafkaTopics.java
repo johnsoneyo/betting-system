@@ -1,4 +1,4 @@
-package com.sportygroup.assignment.common.kafka.utils;
+package ai.johnsoneyo.common.kafka.utils;
 
 public final class
 KafkaTopics {

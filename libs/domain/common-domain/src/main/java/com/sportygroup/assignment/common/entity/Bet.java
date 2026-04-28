@@ -1,6 +1,6 @@
-package com.sportygroup.assignment.common.entity;
+package ai.johnsoneyo.common.entity;
 
-import com.sportygroup.assignment.common.dto.BetType;
+import ai.johnsoneyo.common.dto.BetType;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Convert;

@@ -1,7 +1,7 @@
-package com.sportygroup.assignment.common.repository;
+package ai.johnsoneyo.common.repository;
 
-import com.sportygroup.assignment.common.entity.BetSlip;
-import com.sportygroup.assignment.common.entity.BetSlipStatusProjection;
+import ai.johnsoneyo.common.entity.BetSlip;
+import ai.johnsoneyo.common.entity.BetSlipStatusProjection;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

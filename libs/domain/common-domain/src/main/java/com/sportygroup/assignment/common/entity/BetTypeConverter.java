@@ -1,9 +1,9 @@
-package com.sportygroup.assignment.common.entity;
+package ai.johnsoneyo.common.entity;
 
 
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
-import com.sportygroup.assignment.common.dto.BetType;
+import ai.johnsoneyo.common.dto.BetType;
 
 @Converter(autoApply = true)
 public class BetTypeConverter implements AttributeConverter<BetType, Integer> {

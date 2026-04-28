@@ -1,8 +1,8 @@
-package com.sportygroup.assignment.settlement.service.strategy;
+package ai.johnsoneyo.settlement.service.strategy;
 
 
-import com.sportygroup.assignment.common.entity.Bet;
-import com.sportygroup.assignment.settlement.service.data.BetResult;
+import ai.johnsoneyo.common.entity.Bet;
+import ai.johnsoneyo.settlement.service.data.BetResult;
 import org.springframework.stereotype.Service;
 
 @Service("SYSTEM")

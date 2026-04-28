@@ -1,8 +1,8 @@
-package com.sportygroup.assignment.processor.consumer;
+package ai.johnsoneyo.processor.consumer;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sportygroup.assignment.common.dto.EventOutcomeDTO;
-import com.sportygroup.assignment.processor.service.EventOutcomeService;
+import ai.johnsoneyo.common.dto.EventOutcomeDTO;
+import ai.johnsoneyo.processor.service.EventOutcomeService;
 import io.cloudevents.CloudEvent;
 import io.cloudevents.core.builder.CloudEventBuilder;
 import org.junit.jupiter.api.Test;

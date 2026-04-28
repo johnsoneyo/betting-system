@@ -1,4 +1,4 @@
-package com.sportygroup.assignment.common.kafka.config;
+package ai.johnsoneyo.common.kafka.config;
 
 
 import org.springframework.boot.context.properties.ConfigurationProperties;

@@ -1,7 +1,7 @@
-package com.sportygroup.assignment.processor.service;
+package ai.johnsoneyo.processor.service;
 
-import com.sportygroup.assignment.common.dto.EventOutcomeDTO;
-import com.sportygroup.assignment.common.entity.EventOutcome;
+import ai.johnsoneyo.common.dto.EventOutcomeDTO;
+import ai.johnsoneyo.common.entity.EventOutcome;
 
 import java.time.LocalDateTime;
 import java.util.Map;
